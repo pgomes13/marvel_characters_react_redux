@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import constructQuery from './utils';
+import { constructQuery } from './utils';
 
 /**
  * Make the promise based request to get the marvel comic data as per passed parameters
@@ -9,7 +9,7 @@ import constructQuery from './utils';
  * @param {String} subTopic - the marvel comic subtopic ie. events, series, stories etc
  * @returns {Object} - the response data object
  */
-export default function getMarvelAPIData (topic, id, subTopic) {
+export function getMarvelAPIData (topic, id, subTopic) {
     return axios.get(constructQuery(topic, id, subTopic))
         .then((response) => {
             return response;

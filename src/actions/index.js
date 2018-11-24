@@ -1,0 +1,1 @@
+export { getCharactersAction } from './getCharactersAction';

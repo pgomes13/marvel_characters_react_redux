@@ -13,7 +13,7 @@ const MD5_HASH = MD5(timestamp + PRIVATE_KEY + PUBLIC_KEY).toString();
  * @param {String} subTopic - the marvel comic subtopic ie. events, series, stories etc.
  * @returns {String} - the constructed query
  */
-export default function constructQuery (topic = null, id = null, subTopic = null) {
+export function constructQuery (topic = null, id = null, subTopic = null) {
     let query = BASE_URL;
 
     if (topic) {
