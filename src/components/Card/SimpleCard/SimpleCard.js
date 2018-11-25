@@ -35,9 +35,8 @@ class _SimpleCard extends Component {
 
     render() {
         const { character, classes } = this.props;
-        const { name } = character;
-        const { path, extension } = character.thumbnail;
-        const imageUrl = path + '.' + extension;
+        const { name, thumbnail } = character;
+        const imageUrl = thumbnail.path + '.' + thumbnail.extension;
 
         return (
             <Card className={classes.card}>

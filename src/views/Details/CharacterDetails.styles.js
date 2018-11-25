@@ -1,6 +1,8 @@
 const CharacterDetailsStyles = theme => ({
     layout: {
         width: 'auto',
+        marginTop: theme.spacing.unit * 3,
+        marginBottom: theme.spacing.unit * 3,
         marginLeft: theme.spacing.unit * 3,
         marginRight: theme.spacing.unit * 3,
         [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {

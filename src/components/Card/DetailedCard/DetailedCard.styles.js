@@ -1,10 +1,10 @@
 const DetailedCardStyles = theme => ({
     card: {
         display: 'flex',
-        height: 200
+        height: 250
     },
     cardMedia: {
-        width: 200,
+        width: 250,
     },
     cardDetails: {
         flex: 1,

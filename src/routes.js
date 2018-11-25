@@ -1,5 +1,4 @@
-import { HomeLayoutContainer } from './layouts';
-import { CharacterDetails } from './views';
+import { HomeLayoutContainer, DetailsLayoutContainer } from './layouts';
 
 const Routes = [
     {
@@ -8,7 +7,7 @@ const Routes = [
     },
     {
         path: "/characters/:character_name/details",
-        component: CharacterDetails
+        component: DetailsLayoutContainer
     },
     {
         redirect: true,

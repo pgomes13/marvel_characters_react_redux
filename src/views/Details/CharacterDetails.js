@@ -7,23 +7,30 @@ import Grid from '@material-ui/core/Grid';
 import { DetailedCard } from '../../map';
 import { CharacterDetailsStyles } from './CharacterDetails.styles';
 
-const _CharacterDetails = ({classes}) => (
-    <Fragment>
-        <CssBaseline/>
-        <div className={classes.layout}>
-            <main>
-                <Grid container spacing={40} className={classes.cardGrid}>
-                    <Grid item xs={12} md={12}>
-                        <DetailedCard/>
+const _CharacterDetails = ({ classes, character }) => {
+
+    const { name, description, thumbnail } = character;
+    const imageUrl = thumbnail.path + '.' + thumbnail.extension;
+
+    return (
+        <Fragment>
+            <CssBaseline/>
+            <div className={classes.layout}>
+                <main>
+                    <Grid container spacing={40} className={classes.cardGrid}>
+                        <Grid item xs={12} md={12}>
+                            <DetailedCard imageUrl={imageUrl} title={name} description={description} />
+                        </Grid>
                     </Grid>
-                </Grid>
-            </main>
-        </div>
-    </Fragment>
-);
+                </main>
+            </div>
+        </Fragment>
+    );
+};
 
 _CharacterDetails.propTypes = {
     classes: PropTypes.object.isRequired,
+    character: PropTypes.object.isRequired
 };
 
 const CharacterDetails = withStyles(CharacterDetailsStyles)(_CharacterDetails);

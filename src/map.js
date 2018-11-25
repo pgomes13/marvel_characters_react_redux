@@ -42,7 +42,9 @@ export {
 // ./layout
 export {
     HomeLayout,
-    HomeLayoutContainer
+    HomeLayoutContainer,
+    DetailsLayout,
+    DetailsLayoutContainer
 } from './layouts';
 
 // ./selectors
