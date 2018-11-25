@@ -1,5 +1,5 @@
 import { HomeLayoutContainer } from './layouts';
-import { Blog } from './views';
+import { CharacterDetails } from './views';
 
 const Routes = [
     {
@@ -8,7 +8,7 @@ const Routes = [
     },
     {
         path: "/characters/:character_name/details",
-        component: Blog
+        component: CharacterDetails
     },
     {
         redirect: true,

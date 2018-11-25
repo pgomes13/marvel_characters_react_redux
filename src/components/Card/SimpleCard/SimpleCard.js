@@ -7,18 +7,18 @@ import CardMedia from "@material-ui/core/CardMedia/CardMedia";
 import CardActions from "@material-ui/core/CardActions/CardActions";
 import Button from "@material-ui/core/Button/Button";
 import Card from "@material-ui/core/Card/Card";
-
-import { CharacterCardStyles } from './CharacterCard.styles';
-import { setSelectedCharacterAction } from '../../../map';
 import Typography from "@material-ui/core/Typography/Typography";
 import CardContent from "@material-ui/core/CardContent/CardContent";
+
+import { SimpleCardStyles } from './SimpleCard.styles';
+import { setSelectedCharacterAction } from '../../../map';
 
 /**
  * The HomePanel component consisting of the home panel headings and info
  * @param {Object} classes - the material-ui classes prop
  * @returns {Node} - the Footer component
  */
-class _CharacterCard extends Component {
+class _SimpleCard extends Component {
 
     /**
      * Set the selected character to the store
@@ -63,11 +63,11 @@ class _CharacterCard extends Component {
     }
 }
 
-_CharacterCard.propTypes = {
+_SimpleCard.propTypes = {
     classes: PropTypes.object.isRequired,
     character: PropTypes.object.isRequired
 };
 
-const CharacterCard = connect()(withStyles(CharacterCardStyles)(_CharacterCard));
+const SimpleCard = connect()(withStyles(SimpleCardStyles)(_SimpleCard));
 
-export { CharacterCard };
+export { SimpleCard };

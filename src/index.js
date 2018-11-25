@@ -10,9 +10,6 @@ import  {
     registerServiceWorker
 } from './map';
 
-import { HomeLayoutContainer } from './layouts';
-import { Blog } from './views';
-
 const hist = createBrowserHistory();
 
 ReactDOM.render(

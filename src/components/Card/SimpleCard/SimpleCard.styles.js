@@ -1,4 +1,4 @@
-const CharacterCardStyles = theme => ({
+const SimpleCardStyles = theme => ({
     card: {
         height: '100%',
         display: 'flex',
@@ -12,4 +12,4 @@ const CharacterCardStyles = theme => ({
     }
 });
 
-export { CharacterCardStyles };
+export { SimpleCardStyles };

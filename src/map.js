@@ -12,7 +12,8 @@ export { getMarvelAPIData } from './api/request';
 
 // ./views/
 export {
-    Album
+    Album,
+    CharacterDetails
 } from './views';
 
 // ./constants/
@@ -34,7 +35,8 @@ export {
     Header,
     Footer,
     HomePanel,
-    CharacterCard
+    SimpleCard,
+    DetailedCard
 } from './components';
 
 // ./layout

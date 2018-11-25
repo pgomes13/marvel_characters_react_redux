@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
-import { CharacterCard } from '../../map';
+import { SimpleCard } from '../../map';
 
 import { AlbumStyles } from './Album.styles';
 
@@ -14,7 +14,7 @@ const _Album = ({ classes, characters }) => (
             <Grid container spacing={40}>
                 {characters.map((character, key) => (
                     <Grid item key={key} sm={6} md={4} lg={3}>
-                        <CharacterCard character={character} />
+                        <SimpleCard character={character} />
                     </Grid>
                 ))}
             </Grid>
