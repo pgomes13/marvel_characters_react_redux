@@ -24,4 +24,7 @@ export {
 export { getCharactersAction } from './actions';
 
 // ./components/
-export { Header } from './components';
+export {
+    Header,
+    Footer
+} from './components';

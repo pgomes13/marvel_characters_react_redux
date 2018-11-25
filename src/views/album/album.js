@@ -11,7 +11,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-import { Header } from '../../map';
+import {
+    Header,
+    Footer
+} from '../../map';
 
 const styles = theme => ({
     heroUnit: {
@@ -48,11 +51,7 @@ const styles = theme => ({
     },
     cardContent: {
         flexGrow: 1,
-    },
-    footer: {
-        backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing.unit * 6,
-    },
+    }
 });
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -126,16 +125,7 @@ const _Album = (props) => {
                     </Grid>
                 </div>
             </main>
-            {/* Footer */}
-            <footer className={classes.footer}>
-                <Typography variant="h6" align="center" gutterBottom>
-                    Footer
-                </Typography>
-                <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                    Something here to give the footer a purpose!
-                </Typography>
-            </footer>
-            {/* End footer */}
+            <Footer />
         </React.Fragment>
     );
 }
