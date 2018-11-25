@@ -29,7 +29,7 @@ const _SimpleTable = ({ classes, keyLabel, valueLabel, items, keyIdentifier, val
                         <TableRow>
                             <TableCell component="th" scope="row">{item[keyIdentifier]}</TableCell>
                             { !isValueUrl && <TableCell>{item[valueIdentifier]}</TableCell> }
-                            { isValueUrl && <TableCell><a href={item[valueIdentifier]} target="_blank">{item[valueIdentifier]}</a></TableCell> }
+                            { isValueUrl && <TableCell><a href={item[valueIdentifier]} target="_blank" rel="noopener noreferrer">{item[valueIdentifier]}</a></TableCell> }
                         </TableRow>
                     ))}
                 </TableBody>

@@ -13,19 +13,20 @@ import { HeaderStyles } from './Header.styles';
  * @param {Object} classes - the material-ui classes prop
  * @returns {Node} - the Header component
  */
-const _Header = ({ classes }) => (
+const _Header = ({ classes, title }) => (
     <AppBar position="static" className={classes.appBar}>
         <Toolbar>
             <CameraIcon className={classes.icon} />
             <Typography variant="h6" color="inherit" noWrap>
-                Marvel Comics
+                {title}
             </Typography>
         </Toolbar>
     </AppBar>
 );
 
 _Header.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    title: PropTypes.string
 };
 
 const Header = withStyles(HeaderStyles)(_Header);

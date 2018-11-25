@@ -10,19 +10,29 @@ import { FooterStyles } from './Footer.styles';
  * @param {Object} classes - the material-ui classes prop
  * @returns {Node} - the Footer component
  */
-const _Footer = ({ classes }) => (
+const _Footer = ({ classes, title, content, html }) => (
     <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-            Footer
+            {title}
         </Typography>
+        {content &&
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            Something here to give the footer a purpose!
+            {content}
         </Typography>
+        }
+        {html &&
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+        </Typography>
+        }
+
     </footer>
 );
 
 _Footer.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    title: PropTypes.string,
+    content: PropTypes.string
 };
 
 const Footer = withStyles(FooterStyles)(_Footer);

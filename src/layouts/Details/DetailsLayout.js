@@ -21,12 +21,15 @@ const DetailsLayout = ({ character }) => {
     return (
         <Fragment>
             <CssBaseline/>
-            <Header/>
+            <Header title="Marvel Comics" />
             <main>
                 { isCharacterObjectEmpty && <LinearProgress /> }
                 { !isCharacterObjectEmpty && <CharacterDetails character={character} /> }
             </main>
-            <Footer/>
+            <Footer
+                title="Marvel Comics"
+                html='<a href="http://marvel.com" target="_blank" rel="noopener noreferrer">Data provided by Marvel. © 2018 MARVEL</a>'
+            />
         </Fragment>
     );
 };

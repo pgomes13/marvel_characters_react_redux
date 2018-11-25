@@ -9,6 +9,7 @@ import {
     Album
 } from '../../map';
 import PropTypes from "prop-types";
+import Typography from "@material-ui/core/Typography/Typography";
 
 /**
  * Get the album view with the grid character cards
@@ -19,13 +20,19 @@ import PropTypes from "prop-types";
 const HomeLayout = ({ characters }) => (
     <Fragment>
         <CssBaseline/>
-        <Header/>
+        <Header title="Marvel Comics" />
         <main>
-            <HomePanel/>
+            <HomePanel
+                title="Welcome to Marvel Comics!"
+                description='This app is a tribute to the legendary Stan Lee. React is a powerful framework and "With great power comes great responsibilty".'
+            />
             { characters.length === 0 && <LinearProgress /> }
             { characters && <Album characters={characters} /> }
         </main>
-        <Footer/>
+        <Footer
+            title="Marvel Comics"
+            html='<a href="http://marvel.com" target="_blank" rel="noopener noreferrer">Data provided by Marvel. © 2018 MARVEL</a>'
+        />
     </Fragment>
 );
 
