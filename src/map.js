@@ -36,7 +36,8 @@ export {
     Footer,
     HomePanel,
     SimpleCard,
-    DetailedCard
+    DetailedCard,
+    SimpleTable
 } from './components';
 
 // ./layout

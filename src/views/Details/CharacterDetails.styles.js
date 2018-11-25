@@ -10,6 +10,12 @@ const CharacterDetailsStyles = theme => ({
             marginLeft: 'auto',
             marginRight: 'auto',
         },
+    },
+    content: {
+        flexGrow: 1,
+        padding: theme.spacing.unit * 3,
+        height: '100%',
+        overflow: 'auto',
     }
 });
 
