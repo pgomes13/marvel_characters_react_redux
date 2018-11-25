@@ -11,6 +11,9 @@ const CharacterDetailsStyles = theme => ({
             marginRight: 'auto',
         },
     },
+    tableContainer: {
+        marginTop: theme.spacing.unit * 3
+    },
     content: {
         flexGrow: 1,
         padding: theme.spacing.unit * 3,

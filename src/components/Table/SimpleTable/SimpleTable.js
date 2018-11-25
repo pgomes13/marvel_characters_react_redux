@@ -14,7 +14,7 @@ import { SimpleTableStyles } from './SimpleTable.styles';
  * @param {Object} classes - the material-ui classes prop
  * @returns {Node} - the Footer component
  */
-const _SimpleTable = ({ classes, keyLabel, valueLabel, items }) => {
+const _SimpleTable = ({ classes, keyLabel, valueLabel, items, keyIdentifier, valueIdentifier, isValueUrl = false }) => {
     return (
         <Paper className={classes.root}>
             <Table className={classes.table}>
@@ -27,8 +27,9 @@ const _SimpleTable = ({ classes, keyLabel, valueLabel, items }) => {
                 <TableBody>
                     { items.map(item => (
                         <TableRow>
-                            <TableCell component="th" scope="row">{item.name}</TableCell>
-                            <TableCell numeric>{item.resourceURI}</TableCell>
+                            <TableCell component="th" scope="row">{item[keyIdentifier]}</TableCell>
+                            { !isValueUrl && <TableCell>{item[valueIdentifier]}</TableCell> }
+                            { isValueUrl && <TableCell><a href={item[valueIdentifier]} target="_blank">{item[valueIdentifier]}</a></TableCell> }
                         </TableRow>
                     ))}
                 </TableBody>
@@ -41,7 +42,9 @@ _SimpleTable.propTypes = {
     classes: PropTypes.object.isRequired,
     keyLabel: PropTypes.string.isRequired,
     valueLabel: PropTypes.string.isRequired,
-    items: PropTypes.array.isRequired
+    items: PropTypes.array.isRequired,
+    keyIdentifier: PropTypes.string.isRequired,
+    valueIdentifier: PropTypes.string.isRequired
 };
 
 const SimpleTable = withStyles(SimpleTableStyles)(_SimpleTable);

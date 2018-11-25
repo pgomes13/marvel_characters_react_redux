@@ -13,7 +13,7 @@ import { CharacterDetailsStyles } from './CharacterDetails.styles';
 
 const _CharacterDetails = ({ classes, character }) => {
 
-    const { name, description, thumbnail, comics } = character;
+    const { name, description, thumbnail, comics, series, stories, events, urls } = character;
     const imageUrl = thumbnail.path + '.' + thumbnail.extension;
 
     return (
@@ -30,15 +30,77 @@ const _CharacterDetails = ({ classes, character }) => {
                             />
                         </Grid>
                         <main className={classes.content}>
-                            <Typography variant="h4" gutterBottom component="h2">
-                                Comics
-                            </Typography>
-
-                            <SimpleTable
-                                keyLabel="Name"
-                                valueLabel="URL"
-                                items={comics.items}
-                            />
+                            {comics.items.length > 0 &&
+                            <div className={classes.tableContainer}>
+                                <Typography variant="h4" gutterBottom component="h2">
+                                    Comics
+                                </Typography>
+                                <SimpleTable
+                                    keyLabel="Name"
+                                    valueLabel="URL"
+                                    items={comics.items}
+                                    keyIdentifier="name"
+                                    valueIdentifier="resourceURI"
+                                />
+                            </div>
+                            }
+                            {series.items.length > 0  &&
+                            <div className={classes.tableContainer}>
+                                <Typography variant="h4" gutterBottom component="h2">
+                                    Series
+                                </Typography>
+                                <SimpleTable
+                                    keyLabel="Name"
+                                    valueLabel="URL"
+                                    items={series.items}
+                                    keyIdentifier="name"
+                                    valueIdentifier="resourceURI"
+                                />
+                            </div>
+                            }
+                            {stories.items.length > 0  &&
+                            <div className={classes.tableContainer}>
+                                <Typography variant="h4" gutterBottom component="h2">
+                                    Stories
+                                </Typography>
+                                <SimpleTable
+                                    keyLabel="Name"
+                                    valueLabel="URL"
+                                    items={stories.items}
+                                    keyIdentifier="name"
+                                    valueIdentifier="resourceURI"
+                                />
+                            </div>
+                            }
+                            {events.items.length > 0  &&
+                            <div className={classes.tableContainer}>
+                                <Typography variant="h4" gutterBottom component="h2">
+                                    Events
+                                </Typography>
+                                <SimpleTable
+                                    keyLabel="Name"
+                                    valueLabel="URL"
+                                    items={events.items}
+                                    keyIdentifier="name"
+                                    valueIdentifier="resourceURI"
+                                />
+                            </div>
+                            }
+                            {urls.length > 0  &&
+                            <div className={classes.tableContainer}>
+                                <Typography variant="h4" gutterBottom component="h2">
+                                    Urls
+                                </Typography>
+                                <SimpleTable
+                                    keyLabel="Name"
+                                    valueLabel="URL"
+                                    items={urls}
+                                    keyIdentifier="type"
+                                    valueIdentifier="url"
+                                    isValueUrl={true}
+                                />
+                            </div>
+                            }
                         </main>
                     </Grid>
                 </main>
