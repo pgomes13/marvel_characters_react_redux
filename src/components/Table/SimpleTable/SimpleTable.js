@@ -14,22 +14,23 @@ import { SimpleTableStyles } from './SimpleTable.styles';
  * @param {Object} classes - the material-ui classes prop
  * @returns {Node} - the Footer component
  */
-const _SimpleTable = ({ classes, keyLabel, valueLabel, items, keyIdentifier, valueIdentifier, isValueUrl = false }) => {
+const _SimpleTable = ({ classes, labels, items, identifiers }) => {
     return (
         <Paper className={classes.root}>
             <Table className={classes.table}>
                 <TableHead>
                     <TableRow>
-                        <TableCell>{keyLabel}</TableCell>
-                        <TableCell>{valueLabel}</TableCell>
+                        {labels.map((label, key) => (
+                            <TableCell key={key}>{label}</TableCell>
+                        ))}
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     { items.map(item => (
                         <TableRow>
-                            <TableCell component="th" scope="row">{item[keyIdentifier]}</TableCell>
-                            { !isValueUrl && <TableCell>{item[valueIdentifier]}</TableCell> }
-                            { isValueUrl && <TableCell><a href={item[valueIdentifier]} target="_blank" rel="noopener noreferrer">{item[valueIdentifier]}</a></TableCell> }
+                            {identifiers.map((identifier, key) => (
+                                <TableCell component="th" scope="row" key={key}>{item[identifier]}</TableCell>
+                            ))}
                         </TableRow>
                     ))}
                 </TableBody>
@@ -40,11 +41,10 @@ const _SimpleTable = ({ classes, keyLabel, valueLabel, items, keyIdentifier, val
 
 _SimpleTable.propTypes = {
     classes: PropTypes.object.isRequired,
-    keyLabel: PropTypes.string.isRequired,
-    valueLabel: PropTypes.string.isRequired,
+    labels: PropTypes.array.isRequired,
     items: PropTypes.array.isRequired,
-    keyIdentifier: PropTypes.string.isRequired,
-    valueIdentifier: PropTypes.string.isRequired
+    identifiers: PropTypes.array.isRequired,
+    isValueUrl: PropTypes.bool
 };
 
 const SimpleTable = withStyles(SimpleTableStyles)(_SimpleTable);

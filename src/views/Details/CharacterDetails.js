@@ -36,11 +36,9 @@ const _CharacterDetails = ({ classes, character }) => {
                                     Comics
                                 </Typography>
                                 <SimpleTable
-                                    keyLabel="Name"
-                                    valueLabel="URL"
                                     items={comics.items}
-                                    keyIdentifier="name"
-                                    valueIdentifier="resourceURI"
+                                    labels={['Name', 'Url']}
+                                    identifiers={['name', 'resourceURI']}
                                 />
                             </div>
                             }
@@ -50,11 +48,9 @@ const _CharacterDetails = ({ classes, character }) => {
                                     Series
                                 </Typography>
                                 <SimpleTable
-                                    keyLabel="Name"
-                                    valueLabel="URL"
                                     items={series.items}
-                                    keyIdentifier="name"
-                                    valueIdentifier="resourceURI"
+                                    labels={['Name', 'Url']}
+                                    identifiers={['name', 'resourceURI']}
                                 />
                             </div>
                             }
@@ -64,11 +60,9 @@ const _CharacterDetails = ({ classes, character }) => {
                                     Stories
                                 </Typography>
                                 <SimpleTable
-                                    keyLabel="Name"
-                                    valueLabel="URL"
                                     items={stories.items}
-                                    keyIdentifier="name"
-                                    valueIdentifier="resourceURI"
+                                    labels={['Name', 'Url']}
+                                    identifiers={['name', 'resourceURI']}
                                 />
                             </div>
                             }
@@ -78,11 +72,9 @@ const _CharacterDetails = ({ classes, character }) => {
                                     Events
                                 </Typography>
                                 <SimpleTable
-                                    keyLabel="Name"
-                                    valueLabel="URL"
                                     items={events.items}
-                                    keyIdentifier="name"
-                                    valueIdentifier="resourceURI"
+                                    labels={['Name', 'Url']}
+                                    identifiers={['name', 'resourceURI']}
                                 />
                             </div>
                             }
@@ -92,12 +84,9 @@ const _CharacterDetails = ({ classes, character }) => {
                                     Urls
                                 </Typography>
                                 <SimpleTable
-                                    keyLabel="Name"
-                                    valueLabel="URL"
                                     items={urls}
-                                    keyIdentifier="type"
-                                    valueIdentifier="url"
-                                    isValueUrl={true}
+                                    labels={['Name', 'Url']}
+                                    identifiers={['type', 'url']}
                                 />
                             </div>
                             }
