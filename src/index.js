@@ -10,17 +10,20 @@ import  {
     registerServiceWorker
 } from './map';
 
+import { HomeLayoutContainer } from './layouts';
+import { Blog } from './views';
+
 const hist = createBrowserHistory();
 
 ReactDOM.render(
     <Provider store={configureStore()}>
         <Router history={hist}>
             <Switch>
-                {Routes.map((route, key) => {
+                { Routes.map((route, key) => {
                     if (route.redirect) {
-                        return <Redirect from={route.path} to={route.to} key={key} />;
+                        return <Redirect exact from={route.path} to={route.to} key={key} />;
                     }
-                    return <Route path={route.path} component={route.component} key={key} />;
+                    return <Route exact path={route.path} component={route.component} key={key} />;
                 })}
             </Switch>
         </Router>

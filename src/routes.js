@@ -7,7 +7,7 @@ const Routes = [
         component: HomeLayoutContainer
     },
     {
-        path: "/:character-name/details",
+        path: "/characters/:character_name/details",
         component: Blog
     },
     {
