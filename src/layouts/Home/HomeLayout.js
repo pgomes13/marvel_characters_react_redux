@@ -5,7 +5,7 @@ import {
     Header,
     Footer,
     HomePanel,
-    Album
+    AlbumContainer
 } from '../../map';
 
 /**
@@ -20,7 +20,7 @@ const HomeLayout = () => (
         <Header/>
         <main>
             <HomePanel/>
-            <Album />
+            <AlbumContainer />
         </main>
         <Footer/>
     </Fragment>

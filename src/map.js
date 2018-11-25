@@ -11,7 +11,10 @@ export { register as registerServiceWorker, unregister } from './serviceWorker';
 export { getMarvelAPIData } from './api/request';
 
 // ./views/
-export { Album } from './views';
+export {
+    Album,
+    AlbumContainer
+} from './views';
 
 // ./constants/
 export {

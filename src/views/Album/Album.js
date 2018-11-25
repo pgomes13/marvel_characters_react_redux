@@ -8,9 +8,7 @@ import { CharacterCard } from '../../map';
 
 import { AlbumStyles } from './Album.styles';
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-
-const _Album = ({ classes }) => (
+const _Album = ({ classes, cards }) => (
     <Fragment>
         <div className={classNames(classes.layout, classes.cardGrid)}>
             <Grid container spacing={40}>
