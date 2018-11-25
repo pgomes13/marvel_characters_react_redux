@@ -6,7 +6,7 @@ import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Typography from "@material-ui/core/Typography/Typography";
 import { withStyles } from '@material-ui/core/styles';
 
-import { HeaderStyles } from './HeaderStyles';
+import { HeaderStyles } from './Header.styles';
 
 /**
  * The Header component consisting of the page header and icons

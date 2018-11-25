@@ -26,5 +26,7 @@ export { getCharactersAction } from './actions';
 // ./components/
 export {
     Header,
-    Footer
+    Footer,
+    HomePanel,
+    CharacterCard
 } from './components';

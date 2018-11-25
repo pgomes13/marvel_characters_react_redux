@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from "@material-ui/core/Typography/Typography";
 import { withStyles } from '@material-ui/core/styles';
 
-import { FooterStyles } from './FooterStyles';
+import { FooterStyles } from './Footer.styles';
 
 /**
  * The Footer component consisting of the footer info
