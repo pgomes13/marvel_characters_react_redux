@@ -18,7 +18,7 @@ const _Header = ({ classes }) => (
         <Toolbar>
             <CameraIcon className={classes.icon} />
             <Typography variant="h6" color="inherit" noWrap>
-                Album layout
+                Marvel Comics
             </Typography>
         </Toolbar>
     </AppBar>

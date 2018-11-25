@@ -14,12 +14,10 @@ const _HomePanel = ({ classes }) => (
     <div className={classes.homePanelUnit}>
         <div className={classes.homePanelContent}>
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                Album layout
+                Welcome to Marvel Comics!
             </Typography>
             <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                Something short and leading about the collection below—its contents, the creator, etc.
-                Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-                entirely.
+                This app is a tribute to the legendary Stan Lee. React is a powerful framework and "With great power comes great responsibilty".
             </Typography>
         </div>
     </div>
