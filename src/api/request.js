@@ -12,7 +12,7 @@ import { constructQuery } from './utils';
 export function getMarvelAPIData (payload) {
     return axios.get(constructQuery(payload))
         .then((response) => {
-            return response;
+            return response.data.data.results;
         })
         .catch((error) => {
             return error;
