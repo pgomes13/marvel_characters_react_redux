@@ -16,32 +16,42 @@ import { setSelectedCharacterAction } from '../../../map';
  * @returns {Node} - the Footer component
  */
 class _CharacterCard extends Component {
+    constructor(props) {
+        super(props);
+        const { character, classes } = this.props;
+        const { path, extension } = character.thumbnail;
+        this.imageUrl = path + '.' + extension;
+    }
+
 
     /**
      * Set the selected character to the store
      */
     setSelectCharacter = () => {
         this.props.dispatch(
-            setSelectedCharacterAction(this.props.character)
+            setSelectedCharacterAction(this.character)
         );
     };
 
+    getCharacterDetailsUrl = () => (
+
+    );
+
     render() {
-        const { character, classes } = this.props;
-        const { path, extension } = character.thumbnail;
-        const imageUrl = path + '.' + extension;
 
         return (
             <Card className={classes.card}>
                 <CardMedia
                     className={classes.cardMedia}
-                    image={imageUrl}
+                    image={this.imageUrl}
                     title="Image title"
                 />
                 <CardActions>
-                    <Button size="small" color="primary" onClick={this.setSelectCharacter}>
-                        View
-                    </Button>
+                    <Link to={this.getCharacterDetailsUrl} onClick={this.setSelectCharacter}>
+                        <Button size="small" color="primary">
+                            View
+                        </Button>
+                    </Link>
                 </CardActions>
             </Card>
         );
