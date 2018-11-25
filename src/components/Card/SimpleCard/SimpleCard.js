@@ -11,62 +11,56 @@ import Typography from "@material-ui/core/Typography/Typography";
 import CardContent from "@material-ui/core/CardContent/CardContent";
 
 import { SimpleCardStyles } from './SimpleCard.styles';
-import { setSelectedCharacterAction } from '../../../map';
 
 /**
  * The HomePanel component consisting of the home panel headings and info
  * @param {Object} classes - the material-ui classes prop
  * @returns {Node} - the Footer component
  */
-class _SimpleCard extends Component {
+const _SimpleCard = ({ classes, title, imageUrl, pathname, setAction, dispatch, character }) => {
 
     /**
-     * Set the selected character to the store
+     * Set the action passed from the parent component
      */
-    setSelectCharacter = () => {
-        this.props.dispatch(
-            setSelectedCharacterAction(this.props.character)
+    const setClickAction = () => {
+        dispatch(
+            setAction(character)
         );
     };
 
-    getCharacterDetailsUrl = (name) => (
-        `/characters/${name.toLowerCase().replace(' ', '-')}/details`
+    return (
+        <Card className={classes.card}>
+            <CardMedia
+                className={classes.cardMedia}
+                image={imageUrl}
+                title="Image title"
+            />
+            <CardContent className={classes.cardContent}>
+                <Typography gutterBottom variant="h5" component="h2">
+                    {title}
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Link to={pathname} onClick={setClickAction}>
+                    <Button size="small" color="primary">
+                        View
+                    </Button>
+                </Link>
+            </CardActions>
+        </Card>
     );
-
-    render() {
-        const { character, classes } = this.props;
-        const { name, thumbnail } = character;
-        const imageUrl = thumbnail.path + '.' + thumbnail.extension;
-
-        return (
-            <Card className={classes.card}>
-                <CardMedia
-                    className={classes.cardMedia}
-                    image={imageUrl}
-                    title="Image title"
-                />
-                <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {name}
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Link to={this.getCharacterDetailsUrl(name)} onClick={this.setSelectCharacter}>
-                        <Button size="small" color="primary">
-                            View
-                        </Button>
-                    </Link>
-                </CardActions>
-            </Card>
-        );
-    }
-}
+};
 
 _SimpleCard.propTypes = {
     classes: PropTypes.object.isRequired,
+    title: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    pathname: PropTypes.string.isRequired,
+    setAction: PropTypes.func.isRequired,
+    dispatch: PropTypes.func.isRequired,
     character: PropTypes.object.isRequired
 };
 
-const SimpleCard = connect()(withStyles(SimpleCardStyles)(_SimpleCard));
+const SimpleCard = withStyles(SimpleCardStyles)(_SimpleCard);
 
 export { SimpleCard };
