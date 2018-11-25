@@ -1,0 +1,1 @@
+export { charactersSelector } from './stateSelectors';

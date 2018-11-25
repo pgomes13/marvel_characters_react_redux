@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 import {
     Header,
@@ -21,7 +22,8 @@ const HomeLayout = ({ characters }) => (
         <Header/>
         <main>
             <HomePanel/>
-            <Album characters={characters} />
+            { characters.length === 0 && <LinearProgress /> }
+            { characters && <Album characters={characters} /> }
         </main>
         <Footer/>
     </Fragment>

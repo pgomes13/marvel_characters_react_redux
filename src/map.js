@@ -38,3 +38,8 @@ export {
     HomeLayout,
     HomeLayoutContainer
 } from './layouts';
+
+// ./selectors
+export {
+    charactersSelector
+} from './selectors';

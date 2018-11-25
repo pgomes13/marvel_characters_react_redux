@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { List } from 'immutable';
 
 import {
    HomeLayout,
-    getCharactersAction
+    getCharactersAction,
+    charactersSelector
 } from '../../map';
 import connect from "react-redux/es/connect/connect";
 
@@ -33,9 +32,10 @@ class _HomeLayoutContainer extends Component {
         const { characters } = this.props;
 
         return (
-            characters.toJS().length > 0 && <HomeLayout characters={characters.toJS()} />
+            <HomeLayout characters={characters} />
         );
     }
+
 };
 
 /**
@@ -44,7 +44,7 @@ class _HomeLayoutContainer extends Component {
  * @return {Object} - The state attributes to add to props.
  */
 const mapStateToProps = state => ({
-    characters: state.getIn(['data', 'characters', 'payload']) || List()
+    characters: charactersSelector(state)
 });
 
 const HomeLayoutContainer = connect(mapStateToProps)(_HomeLayoutContainer);
