@@ -9,6 +9,7 @@ It makes use of the following open source projects for boostrapping & running th
 * [React] - A JavaScript library for building user interfaces
 * [Redux] - Redux is a predictable state container for JavaScript apps
 * [redux-saga] - redux-saga is a library that aims to make application side effects easier to manage
+* [Webpack] - bundle your assets
 * [material-ui] - material-ui consists of React components that implement Google's Material Design
 * [Jest] - Delightful JavaScript Testing
 
@@ -40,5 +41,6 @@ yarn test
 [React]: <https://reactjs.org/>
 [Redux]: <https://redux.js.org/>
 [redux-saga]: <https://redux-saga.js.org/>
+[Webpack]: <https://webpack.js.org//>
 [material-ui]: <https://material-ui.com/>
 [Jest]: <https://jestjs.io/>
