@@ -5,8 +5,9 @@ import {
     Header,
     Footer,
     HomePanel,
-    AlbumContainer
+    Album
 } from '../../map';
+import PropTypes from "prop-types";
 
 /**
  * Get the album view with the grid character cards
@@ -14,16 +15,20 @@ import {
  * @returns {*}
  * @private
  */
-const HomeLayout = () => (
+const HomeLayout = ({ characters }) => (
     <Fragment>
         <CssBaseline/>
         <Header/>
         <main>
             <HomePanel/>
-            <AlbumContainer />
+            <Album characters={characters} />
         </main>
         <Footer/>
     </Fragment>
 );
+
+HomeLayout.propTypes = {
+    characters: PropTypes.array.isRequired
+};
 
 export { HomeLayout };

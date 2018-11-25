@@ -8,13 +8,13 @@ import { CharacterCard } from '../../map';
 
 import { AlbumStyles } from './Album.styles';
 
-const _Album = ({ classes, cards }) => (
+const _Album = ({ classes, characters }) => (
     <Fragment>
         <div className={classNames(classes.layout, classes.cardGrid)}>
             <Grid container spacing={40}>
-                {cards.map(card => (
-                    <Grid item key={card} sm={6} md={4} lg={3}>
-                        <CharacterCard/>
+                {characters.map((character, key) => (
+                    <Grid item key={key} sm={6} md={4} lg={3}>
+                        <CharacterCard character={character} />
                     </Grid>
                 ))}
             </Grid>
@@ -24,6 +24,7 @@ const _Album = ({ classes, cards }) => (
 
 _Album.propTypes = {
     classes: PropTypes.object.isRequired,
+    characters: PropTypes.array.isRequired
 };
 
 const Album = withStyles(AlbumStyles)(_Album);

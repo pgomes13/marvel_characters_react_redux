@@ -1,14 +1,14 @@
-import { HomeLayout } from './layouts';
+import { HomeLayoutContainer } from './layouts';
 
 const Routes = [
     {
         path: "/",
-        component: HomeLayout
+        component: HomeLayoutContainer
     },
     {
         redirect: true,
         path: "/",
-        to: "/HomeLayout"
+        to: "/"
     }
 ];
 

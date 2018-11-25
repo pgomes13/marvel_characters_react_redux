@@ -12,8 +12,7 @@ export { getMarvelAPIData } from './api/request';
 
 // ./views/
 export {
-    Album,
-    AlbumContainer
+    Album
 } from './views';
 
 // ./constants/
@@ -36,5 +35,6 @@ export {
 
 // ./layout
 export {
-    HomeLayout
+    HomeLayout,
+    HomeLayoutContainer
 } from './layouts';
