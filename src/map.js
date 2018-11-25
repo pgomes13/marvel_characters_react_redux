@@ -19,11 +19,15 @@ export {
 export {
     GET_CHARACTERS_REQUEST,
     GET_CHARACTERS_REQUEST_SUCCESS,
-    GET_CHARACTERS_REQUEST_ERROR
+    GET_CHARACTERS_REQUEST_ERROR,
+    SET_SELECTED_CHARACTER
 } from './constants/actionTypes';
 
 // ./actions/
-export { getCharactersAction } from './actions';
+export {
+    getCharactersAction,
+    setSelectedCharacterAction
+} from './actions';
 
 // ./components/
 export {
@@ -41,5 +45,6 @@ export {
 
 // ./selectors
 export {
-    charactersSelector
+    charactersSelector,
+    selectedCharacterSelector
 } from './selectors';

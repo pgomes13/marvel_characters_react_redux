@@ -1,4 +1,4 @@
-import { List } from 'immutable';
+import { List, Map } from 'immutable';
 
 /**
  * Get the characters array through the store
@@ -6,5 +6,9 @@ import { List } from 'immutable';
  * @returns {Array} - the characters array
  */
 export const charactersSelector = state => {
-    return (state.getIn(['data', 'characters', 'payload']) || List()).toJS();
+    return (state.getIn(['data', 'results', 'characters']) || List()).toJS();
+};
+
+export const selectedCharacterSelector = state => {
+    return (state.getIn(['data', 'selected', 'character']) || Map()).toJS();
 };

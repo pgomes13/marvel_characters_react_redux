@@ -2,9 +2,11 @@ import { combineReducers } from 'redux-immutablejs';
 import { Map } from 'immutable';
 
 import { getCharactersReducer } from './getCharactersReducer';
+import { setSelectedCharacterReducer } from './setSelectedCharacterReducer';
 
 export default combineReducers({
     data: combineReducers({
-        characters: getCharactersReducer(Map({}))
+        results: getCharactersReducer(Map({})),
+        selected: setSelectedCharacterReducer(Map({}))
     })
 });

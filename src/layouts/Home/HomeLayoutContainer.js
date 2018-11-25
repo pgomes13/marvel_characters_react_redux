@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import {
    HomeLayout,
@@ -14,7 +14,8 @@ import connect from "react-redux/es/connect/connect";
  * @private
  */
 class _HomeLayoutContainer extends Component {
-    componentDidMount() {
+    constructor(props) {
+        super(props);
         this.getCharactersData();
     }
 
@@ -28,14 +29,7 @@ class _HomeLayoutContainer extends Component {
         );
     };
 
-    render() {
-        const { characters } = this.props;
-
-        return (
-            <HomeLayout characters={characters} />
-        );
-    }
-
+    render = () => <HomeLayout characters={this.props.characters} />;
 };
 
 /**
