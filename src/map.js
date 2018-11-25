@@ -30,3 +30,8 @@ export {
     HomePanel,
     CharacterCard
 } from './components';
+
+// ./layout
+export {
+    HomeLayout
+} from './layouts';

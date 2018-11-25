@@ -1,14 +1,14 @@
-import { Album } from './views';
+import { HomeLayout } from './layouts';
 
 const Routes = [
     {
-        path: "/characters",
-        component: Album
+        path: "/",
+        component: HomeLayout
     },
     {
         redirect: true,
         path: "/",
-        to: "/characters"
+        to: "/HomeLayout"
     }
 ];
 
