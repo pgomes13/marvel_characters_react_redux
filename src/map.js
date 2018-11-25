@@ -1,24 +1,27 @@
-// store.js
+// ./store.js
 export  { configureStore } from './store';
 
-// routes.js
+// ./routes.js
 export { Routes } from './routes';
 
-// serviceWorker.js
+// ./serviceWorker.js
 export { register as registerServiceWorker, unregister } from './serviceWorker';
 
-// api/
+// ./api/
 export { getMarvelAPIData } from './api/request';
 
-// views/
+// ./views/
 export { Album } from './views';
 
-// constants/
+// ./constants/
 export {
     GET_CHARACTERS_REQUEST,
     GET_CHARACTERS_REQUEST_SUCCESS,
     GET_CHARACTERS_REQUEST_ERROR
 } from './constants/actionTypes';
 
-// actions/
+// ./actions/
 export { getCharactersAction } from './actions';
+
+// ./components/
+export { Header } from './components';

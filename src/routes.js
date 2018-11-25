@@ -2,13 +2,13 @@ import { Album } from './views';
 
 const Routes = [
     {
-        path: "/album",
+        path: "/characters",
         component: Album
     },
     {
         redirect: true,
         path: "/",
-        to: "/album"
+        to: "/characters"
     }
 ];
 
