@@ -14,7 +14,9 @@ import {
  */
 export function* getCharactersSaga({ payload }) {
     try {
-        const characters = yield call(getMarvelAPIData, payload);
+        const response = yield call(getMarvelAPIData, payload);
+        const characters = response.data.data.results;
+        console.log(characters);
 
         yield [
             put({ type: GET_CHARACTERS_REQUEST_SUCCESS, characters })
