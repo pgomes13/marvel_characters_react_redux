@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { createBrowserHistory } from 'history';
-import { Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import  {
     configureStore,
@@ -17,6 +17,9 @@ ReactDOM.render(
         <Router history={hist}>
             <Switch>
                 {Routes.map((route, key) => {
+                    if (route.redirect) {
+                        return <Redirect from={route.path} to={route.to} key={key} />;
+                    }
                     return <Route path={route.path} component={route.component} key={key} />;
                 })}
             </Switch>

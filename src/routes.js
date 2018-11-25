@@ -1,4 +1,4 @@
-import { Album } from './map';
+import { Album } from './views';
 
 const Routes = [
     {

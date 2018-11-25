@@ -5,13 +5,13 @@ export  { configureStore } from './store';
 export { Routes } from './routes';
 
 // serviceWorker.js
-export { register as registerServiceWorker } from './serviceWorker';
+export { register as registerServiceWorker, unregister } from './serviceWorker';
 
 // api/
 export { getMarvelAPIData } from './api/request';
 
 // views/
-export { Album } from './views/album/album';
+export { Album } from './views';
 
 // constants/
 export {
