@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleCard component renders correctly with props 1`] = `
+<WithStyles(Card)>
+  <WithStyles(CardMedia)
+    image="http://test.test.com"
+    title="Image title"
+  />
+  <WithStyles(CardContent)>
+    <WithStyles(Typography)
+      component="h2"
+      gutterBottom={true}
+      variant="h5"
+    >
+      test
+    </WithStyles(Typography)>
+  </WithStyles(CardContent)>
+  <WithStyles(CardActions)>
+    <Link
+      onClick={[Function]}
+      replace={false}
+      to="/test/test/test"
+    >
+      <WithStyles(Button)
+        color="primary"
+        size="small"
+      >
+        View
+      </WithStyles(Button)>
+    </Link>
+  </WithStyles(CardActions)>
+</WithStyles(Card)>
+`;

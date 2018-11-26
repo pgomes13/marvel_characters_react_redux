@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleTable component renders correctly with props 1`] = `
+<WithStyles(Paper)>
+  <WithStyles(Table)>
+    <WithStyles(TableHead)>
+      <WithStyles(TableRow)>
+        <WithStyles(TableCell)
+          key="0"
+        >
+          test
+        </WithStyles(TableCell)>
+        <WithStyles(TableCell)
+          key="1"
+        >
+          test
+        </WithStyles(TableCell)>
+      </WithStyles(TableRow)>
+    </WithStyles(TableHead)>
+    <WithStyles(TableBody)>
+      <WithStyles(TableRow)
+        key="0"
+      >
+        <WithStyles(TableCell)
+          component="th"
+          key="0"
+          scope="row"
+        >
+          test1
+        </WithStyles(TableCell)>
+        <WithStyles(TableCell)
+          component="th"
+          key="1"
+          scope="row"
+        >
+          test2
+        </WithStyles(TableCell)>
+      </WithStyles(TableRow)>
+    </WithStyles(TableBody)>
+  </WithStyles(Table)>
+</WithStyles(Paper)>
+`;

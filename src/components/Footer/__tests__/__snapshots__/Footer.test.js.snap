@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component renders correctly with props 1`] = `
+<footer>
+  <WithStyles(Typography)
+    align="center"
+    gutterBottom={true}
+    variant="h6"
+  >
+    test
+  </WithStyles(Typography)>
+</footer>
+`;

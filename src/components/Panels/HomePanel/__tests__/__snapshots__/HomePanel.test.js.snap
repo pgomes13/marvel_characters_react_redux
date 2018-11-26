@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePanel component renders correctly with props 1`] = `
+<div>
+  <div>
+    <WithStyles(Typography)
+      align="center"
+      color="textPrimary"
+      component="h1"
+      gutterBottom={true}
+      variant="h2"
+    >
+      test
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      align="center"
+      color="textSecondary"
+      paragraph={true}
+      variant="h6"
+    >
+      test
+    </WithStyles(Typography)>
+  </div>
+</div>
+`;

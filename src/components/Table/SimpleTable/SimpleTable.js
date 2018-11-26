@@ -78,4 +78,4 @@ _SimpleTable.propTypes = {
 
 const SimpleTable = withStyles(SimpleTableStyles)(_SimpleTable);
 
-export { SimpleTable };
+export { _SimpleTable, SimpleTable };

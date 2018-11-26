@@ -68,4 +68,4 @@ _SimpleCard.propTypes = {
 
 const SimpleCard = withStyles(SimpleCardStyles)(_SimpleCard);
 
-export { SimpleCard };
+export { _SimpleCard, SimpleCard };

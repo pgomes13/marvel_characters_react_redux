@@ -32,4 +32,4 @@ _Header.propTypes = {
 
 const Header = withStyles(HeaderStyles)(_Header);
 
-export { Header };
+export { _Header, Header };

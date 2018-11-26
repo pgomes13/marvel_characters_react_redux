@@ -33,4 +33,4 @@ _HomePanel.propTypes = {
 
 const HomePanel = withStyles(HomePanelStyles)(_HomePanel);
 
-export { HomePanel };
+export { _HomePanel, HomePanel };

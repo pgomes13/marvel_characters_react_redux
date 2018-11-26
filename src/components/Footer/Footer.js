@@ -41,4 +41,4 @@ _Footer.propTypes = {
 
 const Footer = withStyles(FooterStyles)(_Footer);
 
-export { Footer };
+export { _Footer, Footer };
