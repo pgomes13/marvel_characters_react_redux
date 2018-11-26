@@ -10,6 +10,13 @@ import {
 } from '../../../map';
 import { CharacterTopicDetailsStyles } from './CharacterTopicDetails.styles';
 
+/**
+ * Get the CharacterTopicDetails higher order component(HOC) view consisting of related components
+ * @param {Object} classes - the material-ui classes prop
+ * @param {Array} topics - the topics Array
+ * @returns {Node} - the CharacterTopicDetails component
+ * @private
+ */
 const _CharacterTopicDetails = ({ classes, topics }) => {
     const { urls, prices, creators, characters, stories, description } = topics;
 

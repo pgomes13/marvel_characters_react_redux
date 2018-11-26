@@ -8,10 +8,8 @@ import {
 import connect from "react-redux/es/connect/connect";
 
 /**
- * Get the album view with the grid character cards
- * @param props
- * @returns {*}
- * @private
+ * Get the HomeLayoutContainer component
+ * @returns {Node} - the HomeLayout component along with store data
  */
 class _HomeLayoutContainer extends Component {
     constructor(props) {

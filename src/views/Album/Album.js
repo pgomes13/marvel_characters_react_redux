@@ -8,6 +8,14 @@ import { withStyles } from '@material-ui/core/styles';
 import { SimpleCard, setSelectedCharacterAction } from '../../map';
 import { AlbumStyles } from './Album.styles';
 
+/**
+ * Get the Album higher order component(HOC) view consisting of related components
+ * @param {Object} classes - the material-ui classes prop
+ * @param {Array} characters - the characters Array
+ * @param {Function} dispatch - the dispatch function prop
+ * @returns {Node} - the Album component
+ * @private
+ */
 const _Album = ({ classes, characters, dispatch }) => {
 
     const imageUrl = thumbnail => thumbnail.path + '.' + thumbnail.extension;

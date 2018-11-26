@@ -13,6 +13,14 @@ import {
 } from '../../../map';
 import { CharacterDetailsStyles } from './CharacterDetails.styles';
 
+/**
+ * Get the CharacterDetails higher order component(HOC) view consisting of related components
+ * @param {Object} classes - the material-ui classes prop
+ * @param {Object} character - the character object
+ * @param {Function} dispatch - the dispatch function prop
+ * @returns {Node} - the CharacterDetails component
+ * @private
+ */
 const _CharacterDetails = ({ classes, character, dispatch }) => {
 
     const { name, description, thumbnail, comics, series, stories, events, urls } = character;

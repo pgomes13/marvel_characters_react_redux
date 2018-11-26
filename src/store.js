@@ -6,6 +6,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers';
 import rootSaga from './sagas';
 
+/**
+ * Configure the Redux store
+ * @param initialState - the initial state of the Redux store
+ * @returns {Store<any, Action> & *}
+ */
 export function configureStore(initialState = Map()) {
     const sagaMiddleware = createSagaMiddleware();
 

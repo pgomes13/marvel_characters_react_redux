@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import PropTypes from "prop-types";
 
 import {
     Header,
@@ -8,14 +9,11 @@ import {
     HomePanel,
     Album
 } from '../../map';
-import PropTypes from "prop-types";
-import Typography from "@material-ui/core/Typography/Typography";
 
 /**
- * Get the album view with the grid character cards
- * @param props
- * @returns {*}
- * @private
+ * Get the HomeLayout component
+ * @param {Array} characters - the characters Array
+ * @returns {Node} - the HomePanel component along with Header and Footer components
  */
 const HomeLayout = ({ characters }) => (
     <Fragment>

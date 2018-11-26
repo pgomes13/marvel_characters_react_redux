@@ -7,10 +7,9 @@ import {
 } from '../../map';
 
 /**
- * Get the album view with the grid character cards
- * @param props
- * @returns {*}
- * @private
+ * Get the DetailsLayoutContainer component
+ * @param {Object} character - the character object
+ * @returns {Node} - the DetailsLayout component along with store data
  */
 const _DetailsLayoutContainer = ({ character }) => <DetailsLayout character={character} />;
 

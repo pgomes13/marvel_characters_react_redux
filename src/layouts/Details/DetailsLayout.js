@@ -10,10 +10,9 @@ import {
 import PropTypes from "prop-types";
 
 /**
- * Get the album view with the grid character cards
- * @param props
- * @returns {*}
- * @private
+ * Get the DetailsLayout component
+ * @param {Object} character - the character object
+ * @returns {Node} - the DetailsLayout component along CharacterDetails component
  */
 const DetailsLayout = ({ character }) => {
     const isCharacterObjectEmpty = Object.keys(character).length === 0 && character.constructor === Object;

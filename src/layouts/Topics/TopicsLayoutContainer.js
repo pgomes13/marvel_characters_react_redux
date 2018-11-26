@@ -7,10 +7,9 @@ import {
 } from '../../map';
 
 /**
- * Get the album view with the grid character cards
- * @param props
- * @returns {*}
- * @private
+ * Get the TopicsLayoutContainer component
+ * @param {Array} topics - the topics array prop
+ * @returns {Node} - the TopicsLayout component along with store data
  */
 const _TopicsLayoutContainer = ({ topics }) => <TopicsLayout topics={topics} />;
 
