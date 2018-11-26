@@ -48,7 +48,7 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                 </Typography>
                                 <SimpleTable
                                     items={comics.items}
-                                    labels={['Name', 'Url']}
+                                    labels={['Name', '']}
                                     identifiers={['name', 'resourceURI']}
                                     setAction={getCharacterTopicAction}
                                     dispatch={dispatch}
@@ -63,7 +63,7 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                 </Typography>
                                 <SimpleTable
                                     items={series.items}
-                                    labels={['Name', 'Url']}
+                                    labels={['Name', '']}
                                     identifiers={['name', 'resourceURI']}
                                     setAction={getCharacterTopicAction}
                                     dispatch={dispatch}
@@ -78,7 +78,7 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                 </Typography>
                                 <SimpleTable
                                     items={stories.items}
-                                    labels={['Name', 'Url']}
+                                    labels={['Name', '']}
                                     identifiers={['name', 'resourceURI']}
                                     setAction={getCharacterTopicAction}
                                     dispatch={dispatch}
@@ -93,7 +93,7 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                 </Typography>
                                 <SimpleTable
                                     items={events.items}
-                                    labels={['Name', 'Url']}
+                                    labels={['Name', '']}
                                     identifiers={['name', 'resourceURI']}
                                     setAction={getCharacterTopicAction}
                                     dispatch={dispatch}
@@ -108,7 +108,7 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                 </Typography>
                                 <SimpleTable
                                     items={urls}
-                                    labels={['Name', 'Url']}
+                                    labels={['Name', '']}
                                     identifiers={['type', 'url']}
                                     setAction={getCharacterTopicAction}
                                     dispatch={dispatch}
