@@ -58,5 +58,6 @@ export {
 // ./selectors
 export {
     charactersSelector,
-    selectedCharacterSelector
+    selectedCharacterSelector,
+    characterTopicsSelector
 } from './selectors';

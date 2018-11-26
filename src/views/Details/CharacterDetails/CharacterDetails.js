@@ -17,6 +17,7 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
 
     const { name, description, thumbnail, comics, series, stories, events, urls } = character;
     const imageUrl = thumbnail.path + '.' + thumbnail.extension;
+    const pathname = name => `/characters/${name.toLowerCase().replace(' ', '-')}/topics`;
 
     return (
         <Fragment>
@@ -43,6 +44,7 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                     identifiers={['name', 'resourceURI']}
                                     setAction={getCharacterTopicAction}
                                     dispatch={dispatch}
+                                    pathname={pathname(character.name)}
                                 />
                             </div>
                             }
@@ -55,6 +57,9 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                     items={series.items}
                                     labels={['Name', 'Url']}
                                     identifiers={['name', 'resourceURI']}
+                                    setAction={getCharacterTopicAction}
+                                    dispatch={dispatch}
+                                    pathname={pathname(character.name)}
                                 />
                             </div>
                             }
@@ -67,6 +72,9 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                     items={stories.items}
                                     labels={['Name', 'Url']}
                                     identifiers={['name', 'resourceURI']}
+                                    setAction={getCharacterTopicAction}
+                                    dispatch={dispatch}
+                                    pathname={pathname(character.name)}
                                 />
                             </div>
                             }
@@ -79,6 +87,9 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                     items={events.items}
                                     labels={['Name', 'Url']}
                                     identifiers={['name', 'resourceURI']}
+                                    setAction={getCharacterTopicAction}
+                                    dispatch={dispatch}
+                                    pathname={pathname(character.name)}
                                 />
                             </div>
                             }
@@ -91,6 +102,9 @@ const _CharacterDetails = ({ classes, character, dispatch }) => {
                                     items={urls}
                                     labels={['Name', 'Url']}
                                     identifiers={['type', 'url']}
+                                    setAction={getCharacterTopicAction}
+                                    dispatch={dispatch}
+                                    pathname={pathname(character.name)}
                                 />
                             </div>
                             }

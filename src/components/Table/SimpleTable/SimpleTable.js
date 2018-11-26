@@ -9,13 +9,14 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { SimpleTableStyles } from './SimpleTable.styles';
 import Button from "@material-ui/core/Button/Button";
+import {Link} from "react-router-dom";
 
 /**
  * The HomePanel component consisting of the home panel headings and info
  * @param {Object} classes - the material-ui classes prop
  * @returns {Node} - the Footer component
  */
-const _SimpleTable = ({ classes, labels, items, identifiers, setAction, dispatch }) => {
+const _SimpleTable = ({ classes, labels, items, identifiers, pathname, setAction, dispatch }) => {
 
     const state = {
         url: ''
@@ -48,7 +49,9 @@ const _SimpleTable = ({ classes, labels, items, identifiers, setAction, dispatch
                             {identifiers.map((identifier, key) => (
                                 identifier === 'resourceURI' ?
                                     <TableCell component="th" scope="row" key={key}>
-                                        <Button size="small" color="primary" key={key} onClick={() => setClickAction(item[identifier])} >View</Button>
+                                        <Link to={pathname} key={key} onClick={() => setClickAction(item[identifier])}>
+                                            <Button size="small" color="primary" key={key}>View</Button>
+                                        </Link>
                                     </TableCell>
                                 :
                                     <TableCell component="th" scope="row" key={key}>{item[identifier]}</TableCell>
@@ -65,6 +68,7 @@ _SimpleTable.propTypes = {
     classes: PropTypes.object.isRequired,
     labels: PropTypes.array.isRequired,
     items: PropTypes.array.isRequired,
+    pathname: PropTypes.string.isRequired,
     identifiers: PropTypes.array.isRequired,
     isValueUrl: PropTypes.bool,
     setAction: PropTypes.func,

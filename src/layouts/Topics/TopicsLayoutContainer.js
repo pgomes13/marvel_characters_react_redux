@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import connect from "react-redux/es/connect/connect";
 
 import {
-    selectedCharacterSelector,
+    characterTopicsSelector,
     TopicsLayout
 } from '../../map';
 
@@ -12,7 +12,7 @@ import {
  * @returns {*}
  * @private
  */
-const _TopicsLayoutContainer = ({ character }) => <TopicsLayout character={character} />;
+const _TopicsLayoutContainer = ({ topics }) => <TopicsLayout topics={topics} />;
 
 /**
  * Extract the following data from the store
@@ -20,7 +20,7 @@ const _TopicsLayoutContainer = ({ character }) => <TopicsLayout character={chara
  * @return {Object} - The state attributes to add to props.
  */
 const mapStateToProps = state => ({
-    character: selectedCharacterSelector(state)
+    topics: characterTopicsSelector(state)
 });
 
 const TopicsLayoutContainer = connect(mapStateToProps)(_TopicsLayoutContainer);

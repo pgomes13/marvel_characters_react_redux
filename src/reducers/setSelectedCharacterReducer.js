@@ -8,7 +8,7 @@ const setSelectedCharacterReducer = (initialState = {}) => {
                 return state.set('character', fromJS(action.character));
 
             case GET_CHARACTER_TOPIC_REQUEST_SUCCESS:
-                return state.set('topic', fromJS(action.characterTopic));
+                return state.set('topic', fromJS(action.characterTopic[0]));
 
             default:
                 return state;

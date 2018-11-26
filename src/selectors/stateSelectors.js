@@ -12,3 +12,7 @@ export const charactersSelector = state => {
 export const selectedCharacterSelector = state => {
     return (state.getIn(['data', 'selected', 'character']) || Map()).toJS();
 };
+
+export const characterTopicsSelector = state => {
+    return (state.getIn(['data', 'selected', 'topic']) || Map()).toJS();
+};

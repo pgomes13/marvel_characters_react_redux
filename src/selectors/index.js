@@ -1,1 +1,1 @@
-export { charactersSelector, selectedCharacterSelector } from './stateSelectors';
+export { charactersSelector, selectedCharacterSelector, characterTopicsSelector } from './stateSelectors';

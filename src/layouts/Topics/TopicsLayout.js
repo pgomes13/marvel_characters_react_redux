@@ -15,16 +15,16 @@ import PropTypes from "prop-types";
  * @returns {*}
  * @private
  */
-const TopicsLayout = ({ character }) => {
-    const isCharacterObjectEmpty = Object.keys(character).length === 0 && character.constructor === Object;
+const TopicsLayout = ({ topics }) => {
+    const isTopicsObjectEmpty = Object.keys(topics).length === 0 && topics.constructor === Object;
 
     return (
         <Fragment>
             <CssBaseline/>
             <Header title="Marvel Comics" />
             <main>
-                { isCharacterObjectEmpty && <LinearProgress /> }
-                { !isCharacterObjectEmpty && <CharacterTopicDetails character={character} /> }
+                { isTopicsObjectEmpty && <LinearProgress /> }
+                { !isTopicsObjectEmpty && <CharacterTopicDetails character={topics} /> }
             </main>
             <Footer
                 title="Marvel Comics"
@@ -35,7 +35,7 @@ const TopicsLayout = ({ character }) => {
 };
 
 TopicsLayout.propTypes = {
-    character: PropTypes.object.isRequired
+    topics: PropTypes.object.isRequired
 };
 
 export { TopicsLayout };
