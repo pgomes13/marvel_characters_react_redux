@@ -13,7 +13,8 @@ export { getMarvelAPIData } from './api/request';
 // ./views/
 export {
     Album,
-    CharacterDetails
+    CharacterDetails,
+    CharacterTopicDetails
 } from './views';
 
 // ./constants/
@@ -45,7 +46,9 @@ export {
     HomeLayout,
     HomeLayoutContainer,
     DetailsLayout,
-    DetailsLayoutContainer
+    DetailsLayoutContainer,
+    TopicsLayout,
+    TopicsLayoutContainer
 } from './layouts';
 
 // ./selectors
