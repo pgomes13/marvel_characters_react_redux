@@ -24,7 +24,7 @@ const TopicsLayout = ({ topics }) => {
             <Header title="Marvel Comics" />
             <main>
                 { isTopicsObjectEmpty && <LinearProgress /> }
-                { !isTopicsObjectEmpty && <CharacterTopicDetails character={topics} /> }
+                { !isTopicsObjectEmpty && <CharacterTopicDetails topics={topics} /> }
             </main>
             <Footer
                 title="Marvel Comics"
