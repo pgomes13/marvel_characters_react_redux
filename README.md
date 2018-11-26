@@ -15,7 +15,7 @@ It makes use of the following open source projects for boostrapping & running th
 * [Jest] - Delightful JavaScript Testing
 
 ## Installation
-Download or clone this respository on your local machine. Then run the following commands in the root directory -
+Download or clone this repository on your local machine. The private key will be sent separately. Insert the ```PRIVATE_KEY``` at `/src/api/base`. Then run the following commands in the root directory -
 
 ```sh
 yarn
