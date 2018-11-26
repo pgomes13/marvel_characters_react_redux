@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography/Typography";
 import {
     DetailedCard,
     SimpleTable
-} from '../../map';
+} from '../../../map';
 import { CharacterDetailsStyles } from './CharacterDetails.styles';
 
 const _CharacterDetails = ({ classes, character }) => {
