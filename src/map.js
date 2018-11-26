@@ -22,13 +22,17 @@ export {
     GET_CHARACTERS_REQUEST,
     GET_CHARACTERS_REQUEST_SUCCESS,
     GET_CHARACTERS_REQUEST_ERROR,
-    SET_SELECTED_CHARACTER
+    SET_SELECTED_CHARACTER,
+    GET_CHARACTER_TOPIC_REQUEST,
+    GET_CHARACTER_TOPIC_REQUEST_SUCCESS,
+    GET_CHARACTER_TOPIC_REQUEST_ERROR
 } from './constants/actionTypes';
 
 // ./actions/
 export {
     getCharactersAction,
-    setSelectedCharacterAction
+    setSelectedCharacterAction,
+    getCharacterTopicAction
 } from './actions';
 
 // ./components/

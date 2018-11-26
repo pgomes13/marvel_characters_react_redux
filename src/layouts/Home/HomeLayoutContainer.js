@@ -24,7 +24,8 @@ class _HomeLayoutContainer extends Component {
             getCharactersAction({
                 topic: 'characters',
                 id: null,
-                subTopic: null
+                subTopic: null,
+                url: null
             })
         );
     };

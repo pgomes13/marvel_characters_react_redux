@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import connect from "react-redux/es/connect/connect";
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
@@ -7,11 +8,12 @@ import Typography from "@material-ui/core/Typography/Typography";
 
 import {
     DetailedCard,
-    SimpleTable
+    SimpleTable,
+    getCharacterTopicAction
 } from '../../../map';
 import { CharacterDetailsStyles } from './CharacterDetails.styles';
 
-const _CharacterDetails = ({ classes, character }) => {
+const _CharacterDetails = ({ classes, character, dispatch }) => {
 
     const { name, description, thumbnail, comics, series, stories, events, urls } = character;
     const imageUrl = thumbnail.path + '.' + thumbnail.extension;
@@ -39,6 +41,8 @@ const _CharacterDetails = ({ classes, character }) => {
                                     items={comics.items}
                                     labels={['Name', 'Url']}
                                     identifiers={['name', 'resourceURI']}
+                                    setAction={getCharacterTopicAction}
+                                    dispatch={dispatch}
                                 />
                             </div>
                             }
@@ -100,9 +104,10 @@ const _CharacterDetails = ({ classes, character }) => {
 
 _CharacterDetails.propTypes = {
     classes: PropTypes.object.isRequired,
-    character: PropTypes.object.isRequired
+    character: PropTypes.object.isRequired,
+    dispatch: PropTypes.func.isRequired
 };
 
-const CharacterDetails = withStyles(CharacterDetailsStyles)(_CharacterDetails);
+const CharacterDetails = connect()(withStyles(CharacterDetailsStyles)(_CharacterDetails));
 
 export { CharacterDetails };

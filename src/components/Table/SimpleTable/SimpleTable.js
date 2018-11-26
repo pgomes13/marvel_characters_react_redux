@@ -8,13 +8,30 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { SimpleTableStyles } from './SimpleTable.styles';
+import Button from "@material-ui/core/Button/Button";
 
 /**
  * The HomePanel component consisting of the home panel headings and info
  * @param {Object} classes - the material-ui classes prop
  * @returns {Node} - the Footer component
  */
-const _SimpleTable = ({ classes, labels, items, identifiers }) => {
+const _SimpleTable = ({ classes, labels, items, identifiers, setAction, dispatch }) => {
+
+    const state = {
+        url: ''
+    };
+
+    const setClickAction = (url) => {
+        return dispatch(
+            setAction({
+                topic: null,
+                id: null,
+                subTopic: null,
+                url: url
+            })
+        );
+    };
+
     return (
         <Paper className={classes.root}>
             <Table className={classes.table}>
@@ -26,13 +43,18 @@ const _SimpleTable = ({ classes, labels, items, identifiers }) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    { items.map(item => (
-                        <TableRow>
+                    { items.map(((item, key) => (
+                        <TableRow key={key}>
                             {identifiers.map((identifier, key) => (
-                                <TableCell component="th" scope="row" key={key}>{item[identifier]}</TableCell>
+                                identifier === 'resourceURI' ?
+                                    <TableCell component="th" scope="row" key={key}>
+                                        <Button size="small" color="primary" key={key} onClick={() => setClickAction(item[identifier])} >View</Button>
+                                    </TableCell>
+                                :
+                                    <TableCell component="th" scope="row" key={key}>{item[identifier]}</TableCell>
                             ))}
                         </TableRow>
-                    ))}
+                    )))}
                 </TableBody>
             </Table>
         </Paper>
@@ -44,7 +66,9 @@ _SimpleTable.propTypes = {
     labels: PropTypes.array.isRequired,
     items: PropTypes.array.isRequired,
     identifiers: PropTypes.array.isRequired,
-    isValueUrl: PropTypes.bool
+    isValueUrl: PropTypes.bool,
+    setAction: PropTypes.func,
+    dispatch: PropTypes.func
 };
 
 const SimpleTable = withStyles(SimpleTableStyles)(_SimpleTable);
