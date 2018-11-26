@@ -22,6 +22,8 @@
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
+    "enzyme": "^3.7.0",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "5.6.0",
     "eslint-config-react-app": "^3.0.5",
     "eslint-loader": "2.1.1",
@@ -84,6 +86,7 @@
     "not op_mini all"
   ],
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts"
@@ -128,5 +131,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "enzyme-adapter-react-16": "^1.7.0",
+    "react-test-renderer": "^16.6.3"
   }
 }

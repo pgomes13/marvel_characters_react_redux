@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailedCard component renders correctly with props 1`] = `
+<WithStyles(Card)>
+  <div>
+    <WithStyles(CardContent)>
+      <WithStyles(Typography)
+        component="h2"
+        variant="h5"
+      >
+        test
+      </WithStyles(Typography)>
+      <WithStyles(Typography)
+        color="textSecondary"
+        variant="subtitle1"
+      >
+        test
+      </WithStyles(Typography)>
+    </WithStyles(CardContent)>
+  </div>
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={false}
+    xlDown={false}
+    xlUp={false}
+    xsDown={true}
+    xsUp={false}
+  >
+    <WithStyles(CardMedia)
+      image="http://test.test.com"
+      title="Image title"
+    />
+  </Hidden>
+</WithStyles(Card)>
+`;

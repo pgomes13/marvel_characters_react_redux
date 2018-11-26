@@ -48,4 +48,4 @@ _DetailedCard.propTypes = {
 
 const DetailedCard = withStyles(DetailedCardStyles)(_DetailedCard);
 
-export { DetailedCard };
+export { _DetailedCard, DetailedCard };
