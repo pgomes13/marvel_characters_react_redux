@@ -2,7 +2,7 @@
 A simple app written in React &amp; Redux that displays the details of different Marvel characters.
 
 ## Synopsis
-The react-redux code resides in the src folder. The production build is compiled in the public folder.
+The react-redux code resides in the ```src``` folder. The production build is compiled in the ```public``` folder.
 
 It makes use of the following open source projects for boostrapping & running the application -
 
