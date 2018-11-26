@@ -13,9 +13,15 @@ import CardContent from "@material-ui/core/CardContent/CardContent";
 import { SimpleCardStyles } from './SimpleCard.styles';
 
 /**
- * The HomePanel component consisting of the home panel headings and info
+ * The SimpleCard component consisting of material-ui Card component
  * @param {Object} classes - the material-ui classes prop
- * @returns {Node} - the Footer component
+ * @param {String} imageUrl - the image url prop
+ * @param {String} title - the title prop
+ * @param {String} pathname - the pathname prop
+ * @param {String} description - the description prop
+ * @param {Function} setAction - the setAction function
+ * @param {Function} dispatch - the dispatch function prop
+ * @returns {Node} - the SimpleCard component
  */
 const _SimpleCard = ({ classes, title, imageUrl, pathname, setAction, dispatch, character }) => {
 

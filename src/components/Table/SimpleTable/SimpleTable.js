@@ -12,16 +12,17 @@ import Button from "@material-ui/core/Button/Button";
 import {Link} from "react-router-dom";
 
 /**
- * The HomePanel component consisting of the home panel headings and info
- * @param {Object} classes - the material-ui classes prop
- * @returns {Node} - the Footer component
+ * The SimpleTable component consisting of the material-ui Table Component
+ * @param {String} title - the title prop
+ * @param {String} pathname - the pathname prop
+ * @param {Array} items - the items array prop
+ * @param {Array} labels - the labels array prop
+ * @param {Array} identifiers - the identifiers array prop
+ * @param {Function} setAction - the setAction function
+ * @param {Function} dispatch - the dispatch function prop
+ * @returns {Node} - the SimpleCard component
  */
 const _SimpleTable = ({ classes, labels, items, identifiers, pathname, setAction, dispatch }) => {
-
-    const state = {
-        url: ''
-    };
-
     const setClickAction = (url) => {
         return dispatch(
             setAction({

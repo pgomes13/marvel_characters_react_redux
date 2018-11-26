@@ -8,7 +8,9 @@ import { HomePanelStyles } from './HomePanel.styles';
 /**
  * The HomePanel component consisting of the home panel headings and info
  * @param {Object} classes - the material-ui classes prop
- * @returns {Node} - the Footer component
+ * @param {String} title - the title prop
+ * @param {String} description - the description prop
+ * @returns {Node} - the HomePanel component
  */
 const _HomePanel = ({ classes, title, description }) => (
     <div className={classes.homePanelUnit}>

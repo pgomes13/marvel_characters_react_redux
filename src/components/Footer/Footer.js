@@ -8,6 +8,9 @@ import { FooterStyles } from './Footer.styles';
 /**
  * The Footer component consisting of the footer info
  * @param {Object} classes - the material-ui classes prop
+ * @param {String} title - the title prop
+ * @param {String} content - the content prop
+ * @param {Node} html - the html prop
  * @returns {Node} - the Footer component
  */
 const _Footer = ({ classes, title, content, html }) => (
@@ -32,7 +35,8 @@ const _Footer = ({ classes, title, content, html }) => (
 _Footer.propTypes = {
     classes: PropTypes.object.isRequired,
     title: PropTypes.string,
-    content: PropTypes.string
+    content: PropTypes.string,
+    html: PropTypes.node
 };
 
 const Footer = withStyles(FooterStyles)(_Footer);

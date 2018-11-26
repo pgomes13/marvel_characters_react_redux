@@ -14,9 +14,12 @@ import { DetailedCardStyles } from './DetailedCard.styles';
 import Hidden from "@material-ui/core/Hidden/Hidden";
 
 /**
- * The HomePanel component consisting of the home panel headings and info
+ * The DetailedCard component consisting of material-ui Card component
  * @param {Object} classes - the material-ui classes prop
- * @returns {Node} - the Footer component
+ * @param {String} imageUrl - the image url prop
+ * @param {String} title - the title prop
+ * @param {String} description - the description prop
+ * @returns {Node} - the DetailedCard component
  */
 const _DetailedCard = ({ classes, imageUrl, title, description }) => (
     <Card className={classes.card}>
@@ -41,7 +44,10 @@ const _DetailedCard = ({ classes, imageUrl, title, description }) => (
 );
 
 _DetailedCard.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    imageUrl: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string
 };
 
 const DetailedCard = withStyles(DetailedCardStyles)(_DetailedCard);

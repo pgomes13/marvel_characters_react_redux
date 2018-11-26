@@ -9,8 +9,9 @@ import { withStyles } from '@material-ui/core/styles';
 import { HeaderStyles } from './Header.styles';
 
 /**
- * The Header component consisting of the page header and icons
+ * The Header component consisting of the header info
  * @param {Object} classes - the material-ui classes prop
+ * @param {String} title - the title prop
  * @returns {Node} - the Header component
  */
 const _Header = ({ classes, title }) => (
