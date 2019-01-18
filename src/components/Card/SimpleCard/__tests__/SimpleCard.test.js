@@ -28,4 +28,11 @@ describe('SimpleCard', () => {
         const wrapper = shallow(<_SimpleCard {...props} />);
         expect(wrapper.contains(<Typography gutterBottom variant="h5" component="h2">test</Typography>)).toBeTruthy();
     });
+
+    it ('dispatches the action on click', () => {
+        const dispatch = jest.fn();
+        const wrapper = shallow(<_SimpleCard {...props} dispatch={dispatch} />);
+        wrapper.find('Link').simulate('click');
+        expect(dispatch).toHaveBeenCalled();
+    });
 });

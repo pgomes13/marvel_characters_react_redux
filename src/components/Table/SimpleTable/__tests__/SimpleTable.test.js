@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import { _SimpleTable } from '../SimpleTable';
@@ -27,5 +27,17 @@ describe('SimpleTable', () => {
     it('component renders correctly with props', () => {
         const wrapper = shallow(<_SimpleTable {...props} />);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('check if the table heading is rendered correctly', () => {
+        const wrapper = mount(<_SimpleTable {...props} />);
+        expect(wrapper.find('TableHead')).toBeDefined();
+        expect(wrapper.find('TableHead').find('TableCell')).toHaveLength(props.labels.length);
+    });
+
+    it('check if the table rows are rendered correctly', () => {
+        const wrapper = mount(<_SimpleTable {...props} />);
+        expect(wrapper.find('TableBody')).toBeDefined();
+        expect(wrapper.find('TableBody').find('TableCell')).toHaveLength(props.identifiers.length);
     });
 });

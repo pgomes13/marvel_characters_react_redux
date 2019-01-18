@@ -9,5 +9,27 @@ exports[`Footer component renders correctly with props 1`] = `
   >
     test
   </WithStyles(Typography)>
+  <WithStyles(Typography)
+    align="center"
+    color="textSecondary"
+    component="p"
+    variant="subtitle1"
+  >
+    test
+  </WithStyles(Typography)>
+  <WithStyles(Typography)
+    align="center"
+    color="textSecondary"
+    component="p"
+    variant="subtitle1"
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>testing is testing out of testing</p>",
+        }
+      }
+    />
+  </WithStyles(Typography)>
 </footer>
 `;
