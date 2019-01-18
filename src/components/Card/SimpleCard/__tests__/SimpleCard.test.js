@@ -1,4 +1,5 @@
 import React from 'react';
+import Typography from "@material-ui/core/Typography/Typography";
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
@@ -18,10 +19,13 @@ describe('SimpleCard', () => {
         character: {}
     };
 
-
-
     it('component renders correctly with props', () => {
         const wrapper = shallow(<_SimpleCard {...props} />);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('component correctly displays the title', () => {
+        const wrapper = shallow(<_SimpleCard {...props} />);
+        expect(wrapper.contains(<Typography gutterBottom variant="h5" component="h2">test</Typography>)).toBeTruthy();
     });
 });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DetailedCard component renders correctly with props 1`] = `
+exports[`DetailedCard Component component renders correctly with props 1`] = `
 <WithStyles(Card)>
   <div>
     <WithStyles(CardContent)>
@@ -8,13 +8,13 @@ exports[`DetailedCard component renders correctly with props 1`] = `
         component="h2"
         variant="h5"
       >
-        test
+        detailed card
       </WithStyles(Typography)>
       <WithStyles(Typography)
         color="textSecondary"
         variant="subtitle1"
       >
-        test
+        detailed card is awesome!
       </WithStyles(Typography)>
     </WithStyles(CardContent)>
   </div>
