@@ -5,7 +5,7 @@ import {
     getCharactersAction,
     charactersSelector
 } from '../../map';
-import connect from "react-redux/es/connect/connect";
+import { connect } from "react-redux";
 
 /**
  * Get the HomeLayoutContainer component
