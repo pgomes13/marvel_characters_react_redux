@@ -20,7 +20,6 @@ exports[`Footer component renders correctly with props 1`] = `
   <WithStyles(Typography)
     align="center"
     color="textSecondary"
-    component="p"
     variant="subtitle1"
   >
     <div

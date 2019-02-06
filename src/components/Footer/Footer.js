@@ -24,11 +24,10 @@ const _Footer = ({ classes, title, content, html }) => (
         </Typography>
         }
         {html &&
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        <Typography variant="subtitle1" align="center" color="textSecondary">
             <div dangerouslySetInnerHTML={{ __html: html }} />
         </Typography>
         }
-
     </footer>
 );
 
